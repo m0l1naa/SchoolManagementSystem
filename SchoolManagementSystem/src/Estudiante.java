@@ -1,7 +1,21 @@
-public class Estudiante {
-    private int id;
-    private String nombre;
-    private String apellido;
-    private String fechaDeNacimiento;
+public class Estudiante extends Persona {
     private String estado;
+
+    public Estudiante(int id, String nombre, String apellido, String fechaDeNacimiento, String estado) {
+        super(id, nombre, apellido, fechaDeNacimiento);
+        this.estado = estado;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Estado: " + estado;
+    }
 }
